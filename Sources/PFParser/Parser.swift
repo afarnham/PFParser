@@ -10,6 +10,10 @@ import Foundation
 
 public struct Parser<A> {
     let run: (inout Substring) -> A?
+    
+    public init(run: (inout Substring) -> A?) {
+        self.run = run
+    }
 }
 
 public let int = Parser<Int> { str in
