@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Parser<A> {
-    let run: (inout Substring) -> A?
+    public let run: (inout Substring) -> A?
     
     public init(run: @escaping (inout Substring) -> A?) {
         self.run = run
